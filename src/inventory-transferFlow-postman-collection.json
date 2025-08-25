@@ -1,0 +1,510 @@
+{
+  "info": {
+    "name": "inventory-transferflow-service API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "getInternalTransfer",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "ExampleValue",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{serviceUrl}}//internaltransfers/:internalTransferId",
+          "host": [
+            "{{serviceUrl}}"
+          ],
+          "path": [
+            "internaltransfers",
+            ":internalTransferId"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "getInternalTransferByStatus",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "ExampleValue",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{serviceUrl}}//internaltransferbystatus/:internalTransferId",
+          "host": [
+            "{{serviceUrl}}"
+          ],
+          "path": [
+            "internaltransferbystatus",
+            ":internalTransferId"
+          ],
+          "query": [
+            {
+              "key": "status",
+              "value": "Enum"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "createInternalTransfer",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "ExampleValue",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"sourceBranchId\": \"ID\",\n  \"sourceSectionId\": \"ID\",\n  \"destinationBranchId\": \"ID\",\n  \"destinationSectionId\": \"ID\",\n  \"status\": \"Enum\",\n  \"reason\": \"String\",\n  \"note\": \"Text\",\n  \"transferDate\": \"Date\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{serviceUrl}}//internaltransfers",
+          "host": [
+            "{{serviceUrl}}"
+          ],
+          "path": [
+            "internaltransfers"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "updateInternalTransfer",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "ExampleValue",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "PATCH",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"sourceBranchId\": \"ID\",\n  \"sourceSectionId\": \"ID\",\n  \"destinationBranchId\": \"ID\",\n  \"destinationSectionId\": \"ID\",\n  \"status\": \"Enum\",\n  \"reason\": \"String\",\n  \"note\": \"Text\",\n  \"transferDate\": \"Date\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{serviceUrl}}//internaltransfers/:internalTransferId",
+          "host": [
+            "{{serviceUrl}}"
+          ],
+          "path": [
+            "internaltransfers",
+            ":internalTransferId"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "deleteInternalTransfer",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "ExampleValue",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "{{serviceUrl}}//internaltransfers/:internalTransferId",
+          "host": [
+            "{{serviceUrl}}"
+          ],
+          "path": [
+            "internaltransfers",
+            ":internalTransferId"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "listInternalTransfers",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "ExampleValue",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{serviceUrl}}//internaltransfers",
+          "host": [
+            "{{serviceUrl}}"
+          ],
+          "path": [
+            "internaltransfers"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "getInternalTransferLine",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "ExampleValue",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{serviceUrl}}//internaltransferlines/:internalTransferLineId",
+          "host": [
+            "{{serviceUrl}}"
+          ],
+          "path": [
+            "internaltransferlines",
+            ":internalTransferLineId"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "createInternalTransferLine",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "ExampleValue",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"internalTransferId\": \"ID\",\n  \"bookId\": \"ID\",\n  \"quantity\": \"Integer\",\n  \"note\": \"Text\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{serviceUrl}}//internaltransferlines",
+          "host": [
+            "{{serviceUrl}}"
+          ],
+          "path": [
+            "internaltransferlines"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "updateInternalTransferLine",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "ExampleValue",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "PATCH",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"internalTransferId\": \"ID\",\n  \"bookId\": \"ID\",\n  \"quantity\": \"Integer\",\n  \"note\": \"Text\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{serviceUrl}}//internaltransferlines/:internalTransferLineId",
+          "host": [
+            "{{serviceUrl}}"
+          ],
+          "path": [
+            "internaltransferlines",
+            ":internalTransferLineId"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "deleteInternalTransferLine",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "ExampleValue",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "{{serviceUrl}}//internaltransferlines/:internalTransferLineId",
+          "host": [
+            "{{serviceUrl}}"
+          ],
+          "path": [
+            "internaltransferlines",
+            ":internalTransferLineId"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "listInternalTransferLines",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "ExampleValue",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{serviceUrl}}//internaltransferlines",
+          "host": [
+            "{{serviceUrl}}"
+          ],
+          "path": [
+            "internaltransferlines"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "getInternalTransferLog",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "ExampleValue",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{serviceUrl}}//internaltransferlogs/:internalTransferLogId",
+          "host": [
+            "{{serviceUrl}}"
+          ],
+          "path": [
+            "internaltransferlogs",
+            ":internalTransferLogId"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "createInternalTransferLog",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "ExampleValue",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"internalTransferId\": \"ID\",\n  \"transferLineId\": \"ID\",\n  \"eventType\": \"Enum\",\n  \"oldStatus\": \"Enum\",\n  \"newStatus\": \"Enum\",\n  \"note\": \"Text\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{serviceUrl}}//internaltransferlogs",
+          "host": [
+            "{{serviceUrl}}"
+          ],
+          "path": [
+            "internaltransferlogs"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "updateInternalTransferLog",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "ExampleValue",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "PATCH",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{serviceUrl}}//internaltransferlogs/:internalTransferLogId",
+          "host": [
+            "{{serviceUrl}}"
+          ],
+          "path": [
+            "internaltransferlogs",
+            ":internalTransferLogId"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "deleteInternalTransferLog",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "ExampleValue",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "{{serviceUrl}}//internaltransferlogs/:internalTransferLogId",
+          "host": [
+            "{{serviceUrl}}"
+          ],
+          "path": [
+            "internaltransferlogs",
+            ":internalTransferLogId"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "listInternalTransferLogs",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "ExampleValue",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{serviceUrl}}//internaltransferlogs",
+          "host": [
+            "{{serviceUrl}}"
+          ],
+          "path": [
+            "internaltransferlogs"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
